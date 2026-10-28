@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+
+  <title>LORD NOCTICS BLACK FURY</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <header class="header">
+      <p class="eyebrow">CENTRE DE PRÉPARATION</p>
+
+      <h1>
+        LORD NOCTICS<br>
+        <span>BLACK FURY</span>
+      </h1>
+
+      <p class="subtitle">
+        Préparer un signalement clair et factuel
+      </p>
+    </header>
+
+    <section class="notice">
+      <strong>Information importante</strong>
+
+      <p>
+        Ce formulaire prépare un texte de signalement.
+        Il ne vérifie pas le statut réel d'un compte WhatsApp
+        et n'envoie aucun signalement automatiquement.
+      </p>
+    </section>
+
+    <form id="reportForm">
+
+      <label for="phone">Numéro concerné</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        placeholder="+224XXXXXXXXX"
+        autocomplete="tel"
+        required
+      >
+
+      <label for="author">
+        Votre nom ou pseudonyme (facultatif)
+      </label>
+
+      <input
+        id="author"
+        name="author"
+        type="text"
+        placeholder="LORD NOCTICS BLACK FURY"
+        maxlength="80"
+      >
+
+      <label for="reason">Motif du signalement</label>
+
+      <select id="reason" name="reason" required>
+        <option value="">Choisir un motif</option>
+        <option value="Spam ou messages non sollicités">
+          Spam ou messages non sollicités
+        </option>
+        <option value="Usurpation d’identité">
+          Usurpation d'identité
+        </option>
+        <option value="Harcèlement ou menaces">
+          Harcèlement ou menaces
+        </option>
+        <option value="Compte compromis">
+          Compte compromis
+        </option>
+        <option value="Autre motif à préciser">
+          Autre motif à préciser
+        </option>
+      </select>
+
+      <label for="details">Description des faits</label>
+
+      <textarea
+        id="details"
+        name="details"
+        rows="5"
+        maxlength="1500"
+        placeholder="Décris les faits avec précision."
+      ></textarea>
+
+      <div class="actions">
+
+        <button type="submit">
+          Préparer le signalement
+        </button>
+
+        <button
+          type="button"
+          class="secondary"
+          id="copyBtn"
+        >
+          Copier le texte
+        </button>
+
+        <button
+          type="button"
+          class="secondary"
+          id="emailBtn"
+        >
+          Ouvrir mon application e-mail
+        </button>
+
+      </div>
+    </form>
+
+    <section class="result-wrap" aria-live="polite">
+
+      <h2>Texte préparé</h2>
+
+      <p id="status" class="status">
+        Remplis le formulaire, puis appuie sur
+        « Préparer le signalement ».
+      </p>
+
+      <textarea
+        id="reportOutput"
+        rows="10"
+        readonly
+        placeholder="Le texte préparé apparaîtra ici."
+      ></textarea>
+
+    </section>
+
+    <footer>
+      LORD NOCTICS BLACK FURY
+      · Outil de préparation uniquement
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
